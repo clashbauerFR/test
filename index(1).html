@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CommunitySMP - Minecraft Server</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --green: #00ff88;
+      --blue: #0077ff;
+      --bg-dark: #0a0a0a;
+      --glass: rgba(255,255,255,0.05);
+      --glass-border: rgba(255,255,255,0.1);
+      --white: #fff;
+      --gray: #aaa;
+      --accent: #ffcc00;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-dark);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    nav {
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid var(--glass-border);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .section p {
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--glass);
+      border-top: 1px solid var(--glass-border);
+      padding: 50px 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-section img {
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .discord-button, .play-button {
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .discord-button {
+      background: #5865F2;
+      color: white;
+    }
+
+    .play-button {
+      background: var(--green);
+      color: #000;
+    }
+
+    .play-ip {
+      margin-top: 10px;
+      font-weight: bold;
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">CommunitySMP</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#vote">Vote</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#wiki">Wiki</a></li>
+      <li><a href="#regeln">Regeln</a></li>
+    </ul>
+  </nav>
+
+  <section class="section" id="home">
+    <h2>Willkommen auf CommunitySMP</h2>
+    <p>Bleib dran für aktuelle Updates und Serveränderungen!</p>
+  </section>
+
+  <section class="section" id="vote">
+    <h2>Vote für uns</h2>
+    <p><a href="https://www.minecraft-serverlist.net/vote/59479" target="_blank" style="color: var(--green); text-decoration: underline;">Hier klicken um zu voten</a></p>
+  </section>
+
+  <section class="section" id="shop">
+    <h2>Shop</h2>
+    <p>Unterstütze den Server mit coolen Items, Rängen und mehr!</p>
+  </section>
+
+  <div class="footer-section">
+    <div>
+      <a href="#" class="play-button" onclick="copyIP()">Jetzt Spielen</a>
+      <div class="play-ip">Java & Bedrock IP:<br>38.242.231.65:33685</div>
+    </div>
+    <img src="logo.png" alt="Server Logo" />
+    <div>
+      <a href="https://discord.gg/AEaJS36qtA" class="discord-button" target="_blank">Discord beitreten</a>
+    </div>
+  </div>
+
+  <section class="section" id="wiki">
+    <h2>Wiki</h2>
+    <p>Hier findest du alle Infos rund um das Spiel, Features und mehr!</p>
+  </section>
+
+  <section class="section" id="regeln">
+    <h2>Regeln</h2>
+    <p>Bitte beachte die Serverregeln für ein faires Spielerlebnis.</p>
+  </section>
+
+  <script>
+    function copyIP() {
+      const ip = "38.242.231.65:33685";
+      navigator.clipboard.writeText(ip).then(() => {
+        alert("IP kopiert: " + ip);
+      });
+    }
+  </script>
+
+</body>
+</html>
